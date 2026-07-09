@@ -3,264 +3,545 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Time — Андрушівка</title>
+  <title>Іван Скочеляс — Персональний Тренер & Нутриціолог</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Іван Скочеляс — професійний тренер, нутриціолог та експерт з тілобудування. Індивідуальні програми тренувань, розбір харчування та повний супровід до результату.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
-    <!-- Hero / Logo -->
-    <section class="hero">
-      <div class="logo-wrapper">
-        <img src="logo.jpg" alt="Fitness Time Андрушівка" class="logo">
-      </div>
-      <div class="hero-text">
-        <h1 class="brand-name">Fitness Time</h1>
-        <p class="brand-location">Андрушівка</p>
-      </div>
-    </section>
-
-    <!-- Description -->
-    <section class="section description-section scroll-reveal">
-      <p class="description-text">
-        Сучасна фітнес-студія в Андрушівці. Групові тренування, 
-        <strong>TRX</strong>, силові програми, кардіо та пілатес. 
-        Професійний тренерський склад та індивідуальний підхід до кожного.
-      </p>
-      <p class="description-sub">Твоє тіло — твій час!</p>
-    </section>
-
-    <!-- Gallery -->
-    <section class="section gallery-section scroll-reveal">
-      <h2 class="section-title">Галерея</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop&q=80" alt="Тренажерний зал" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=400&fit=crop&q=80" alt="Силові тренування" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&q=80" alt="Групові тренування" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop&q=80" alt="Пілатес" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop&q=80" alt="TRX" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=400&h=400&fit=crop&q=80" alt="Кардіо" loading="lazy">
-        </div>
-      </div>
-      <p class="gallery-hint">Більше фото в Instagram</p>
-    </section>
-
-    <!-- Schedule -->
-    <section class="section schedule-section scroll-reveal">
-      <h2 class="section-title">Розклад тренувань (30.03–3.04)</h2>
-      <div class="schedule-card">
-
-        <!-- Monday -->
-        <div class="schedule-day">
-          <div class="schedule-day-header">
-            <span class="schedule-day-name">Понеділок</span>
-          </div>
-          <div class="schedule-class">17:00 — DVIZH</div>
-          <div class="schedule-class">18:15 — DVIZH</div>
-          <div class="schedule-class">19:30 — DVIZH</div>
-        </div>
-
-        <div class="schedule-day-sep"></div>
-
-        <!-- Tuesday -->
-        <div class="schedule-day">
-          <div class="schedule-day-header">
-            <span class="schedule-day-name">Вівторок</span>
-          </div>
-          <div class="schedule-class">16:00 — KIDS</div>
-          <div class="schedule-class">17:15 — PILATES</div>
-          <div class="schedule-class">18:30 — DVIZH</div>
-        </div>
-
-        <div class="schedule-day-sep"></div>
-
-        <!-- Wednesday -->
-        <div class="schedule-day">
-          <div class="schedule-day-header">
-            <span class="schedule-day-name">Середа</span>
-          </div>
-          <div class="schedule-class">17:00 — Strong TRX</div>
-          <div class="schedule-class">18:15 — Strong TRX</div>
-          <div class="schedule-class">19:30 — Strong TRX</div>
-        </div>
-
-        <div class="schedule-day-sep"></div>
-
-        <!-- Thursday -->
-        <div class="schedule-day">
-          <div class="schedule-day-header">
-            <span class="schedule-day-name">Четвер</span>
-          </div>
-          <div class="schedule-class">16:00 — KIDS</div>
-          <div class="schedule-class">17:15 — PILATES</div>
-          <div class="schedule-class">18:30 — TRX FIT</div>
-        </div>
-
-        <div class="schedule-day-sep"></div>
-
-        <!-- Friday -->
-        <div class="schedule-day">
-          <div class="schedule-day-header">
-            <span class="schedule-day-name">П'ятниця</span>
-          </div>
-          <div class="schedule-class">17:00 — HIIT</div>
-          <div class="schedule-class">18:15 — HIIT</div>
-          <div class="schedule-class">19:30 — HIIT</div>
-        </div>
-
-        <div class="schedule-note">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="16" x2="12" y2="12"/>
-            <line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-          <span>Запис на тренування в Direct</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Price List -->
-    <section class="section price-section scroll-reveal">
-      <h2 class="section-title">Прайс-лист (2026)</h2>
-      <div class="price-card">
-        <div class="price-item">
-          <div class="price-item-info">
-            <span class="price-item-name">Місячний абонемент</span>
-            <span class="price-item-desc">Понеділок / Середа / П'ятниця</span>
-          </div>
-          <span class="price-item-value">1 200 грн</span>
-        </div>
-        <div class="price-divider"></div>
-        <div class="price-item">
-          <div class="price-item-info">
-            <span class="price-item-name">Місячний абонемент</span>
-            <span class="price-item-desc">Вівторок / Четвер</span>
-          </div>
-          <span class="price-item-value">1 000 грн</span>
-        </div>
-        <div class="price-divider"></div>
-        <div class="price-item">
-          <div class="price-item-info">
-            <span class="price-item-name">Місячний абонемент KIDS</span>
-            <span class="price-item-desc">Дитячі тренування</span>
-          </div>
-          <span class="price-item-value">800 грн</span>
-        </div>
-        <div class="price-divider"></div>
-        <div class="price-item">
-          <div class="price-item-info">
-            <span class="price-item-name">Разове заняття PILATES</span>
-            <span class="price-item-desc">Окремі заняття пілатесом</span>
-          </div>
-          <span class="price-item-value">200 грн</span>
-        </div>
-        <div class="price-divider"></div>
-        <div class="price-item">
-          <div class="price-item-info">
-            <span class="price-item-name">Разове тренування</span>
-            <span class="price-item-desc">Будь-який інший напрямок</span>
-          </div>
-          <span class="price-item-value">200 грн</span>
-        </div>
-      </div>
-      <p class="price-hint">Дія абонементу — від дати оплати до того ж числа наступного місяця</p>
-    </section>
-
-    <!-- Contacts -->
-    <section class="section contacts-section scroll-reveal">
-      <h2 class="section-title">Контакти</h2>
-      <div class="contacts-wrapper">
-
-      <!-- Phone -->
-      <a href="tel:+380507463350" class="contact-card">
-        <span class="icon-badge icon-phone">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </span>
-        <div class="contact-info">
-          <span class="contact-label">Телефон</span>
-          <span class="contact-value">050 746 3350</span>
-        </div>
-      </a>
-
-      <!-- Telegram -->
-      <a href="https://t.me/+380507463350" target="_blank" rel="noopener" class="contact-card">
-        <span class="icon-badge icon-telegram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 2 11 13 9 9 20 4"/>
-            <path d="M22 2L15 22 11 13 2 9 22 2z"/>
-            <line x1="11" y1="13" x2="15" y2="22"/>
-          </svg>
-        </span>
-        <div class="contact-info">
-          <span class="contact-label">Telegram</span>
-          <span class="contact-value">@FitnessTime_Andrushivka</span>
-        </div>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/fitness.time.andrushivka/" target="_blank" rel="noopener" class="contact-card">
-        <span class="icon-badge icon-instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-        </span>
-        <div class="contact-info">
-          <span class="contact-label">Instagram</span>
-          <span class="contact-value">@fitness.time.andrushivka</span>
-        </div>
-      </a>
-      </div>
-    </section>
-
-    <!-- Location -->
-    <section class="section map-section scroll-reveal">
-      <a href="https://maps.app.goo.gl/neSS4CVqJjoxsoCHA?g_st=ac" target="_blank" rel="noopener" class="map-button">
-        <span class="icon-badge icon-location">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-        </span>
-        <span class="map-text">Студія Фітнес Тайм</span>
-        <span class="map-sub">Показати на мапі</span>
-      </a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2026 Fitness Time Андрушівка</p>
-    </footer>
+  <!-- ==========================================================================
+       ANIMATED BACKGROUND GLOW BLOBS
+       ========================================================================== -->
+  <div class="bg-glow-blobs">
+    <div class="blob blob-1" id="interactiveBlob"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
   </div>
 
+  <!-- ==========================================================================
+       HERO HEADER SECTION (WIDE & DYNAMIC)
+       ========================================================================== -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-img-wrapper tilt-card entrance-fade" id="heroImageWrapper">
+        <img src="header.jpg" alt="Іван Скочеляс — Тренер з фітнесу та нутриціолог" class="hero-img">
+        <div class="hero-img-glow"></div>
+      </div>
+      
+      <div class="hero-text-content">
+        <span class="brand-title entrance-fade delay-1">Тренер • Нутриціолог • Експерт з тілобудування</span>
+        <h1 class="brand-name entrance-fade delay-2">Іван Скочеляс</h1>
+        <p class="brand-pitch entrance-fade delay-3">
+          Допомагаю змінити тіло, звички та якість життя через тренування, харчування та підтримку.
+        </p>
+        
+        <!-- Down arrow indicator -->
+        <div class="hero-arrow entrance-fade delay-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <!-- ==========================================================================
+         CONTACTS / SOCIALS SECTION
+         ========================================================================== -->
+    <section class="section scroll-reveal" id="contacts">
+      <div class="section-container">
+        <h2 class="section-title">Зв'язатися зі мною</h2>
+        
+        <div class="contacts-widget">
+          <!-- Social Grid -->
+          <div class="social-grid">
+            <!-- Telegram -->
+            <a href="https://t.me/fittvan" target="_blank" rel="noopener" class="social-card telegram tilt-card" id="social-tg">
+              <span class="social-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </span>
+              <span class="social-label">Telegram</span>
+              <span class="social-handle">@fittvan</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ivan_skochelyas?igsh=dzd2OHk2MXByNWll&utm_source=qr" target="_blank" rel="noopener" class="social-card instagram tilt-card" id="social-ig">
+              <span class="social-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </span>
+              <span class="social-label">Instagram</span>
+              <span class="social-handle">@ivan_skochelyas</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/14mhuJBgE2G/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-card facebook tilt-card" id="social-fb">
+              <span class="social-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </span>
+              <span class="social-label">Facebook</span>
+              <span class="social-handle">Іван Скочеляс</span>
+            </a>
+          </div>
+
+          <!-- Phone Call Card -->
+          <a href="tel:+380507463350" class="call-card tilt-card" id="contact-phone">
+            <div class="call-left">
+              <svg class="call-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span class="call-label">Зателефонувати мені</span>
+            </div>
+            <span class="call-number">+38 (050) 746 33 50</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section class="section scroll-reveal" id="about">
+      <div class="section-container">
+        <h2 class="section-title">Про мене</h2>
+        
+        <div class="about-card">
+          <div class="about-img-wrapper">
+            <img src="about_ivan_real.jpg" alt="Іван Скочеляс за роботою" class="about-img">
+          </div>
+          
+          <div class="about-content">
+            <p class="about-text">
+              Мене звати Іван Скочеляс. Я — тренер, нутриціолог та експерт з тілобудування. Працюю з людьми, які хочуть не просто схуднути чи набрати масу, а змінити своє життя назавжди.
+            </p>
+            
+            <!-- Metrics Stats -->
+            <div class="stats-grid">
+              <!-- Stat 1 -->
+              <div class="stat-item">
+                <span class="stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6.5 6.5h11M6.5 17.5h11M2.5 12h19M6.5 6.5v11M17.5 6.5v11"></path>
+                  </svg>
+                </span>
+                <div class="stat-info">
+                  <span class="stat-value">Більше 5 років</span>
+                  <span class="social-handle">практики</span>
+                </div>
+              </div>
+
+              <!-- Stat 2 -->
+              <div class="stat-item">
+                <span class="stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </span>
+                <div class="stat-info">
+                  <span class="stat-value">Понад 300+</span>
+                  <span class="social-handle">задоволених клієнтів</span>
+                </div>
+              </div>
+
+              <!-- Stat 3 -->
+              <div class="stat-item">
+                <span class="stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </span>
+                <div class="stat-info">
+                  <span class="stat-value">Індивідуальний</span>
+                  <span class="social-handle">підхід</span>
+                </div>
+              </div>
+
+              <!-- Stat 4 -->
+              <div class="stat-item">
+                <span class="stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </span>
+                <div class="stat-info">
+                  <span class="stat-value">Реальні результати</span>
+                  <span class="social-handle">без шкоди здоров'ю</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRODUCTS SECTION
+         ========================================================================== -->
+    <section class="section scroll-reveal" id="products">
+      <div class="section-container">
+        <h2 class="section-title">Мої продукти</h2>
+        
+        <div class="products-container">
+          
+          <!-- Product 1 -->
+          <div class="product-card-wrapper scroll-reveal tilt-card">
+            <div class="product-card-inner">
+              <!-- Front Face Cover -->
+              <div class="product-card-front">
+                <div class="product-front-badge">01</div>
+                <h3 class="product-front-title">Доступ до Telegram-чату</h3>
+                <div class="product-front-prompt">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Деталі</span>
+                </div>
+              </div>
+              <!-- Back Face Details -->
+              <div class="product-card-back">
+                <div class="product-badge">01</div>
+                <div class="product-header">
+                  <h3 class="product-title">Доступ до Telegram-чату</h3>
+                  <p class="product-desc">Закритий Telegram-канал з корисним контентом для твого прогресу.</p>
+                </div>
+                <ul class="product-features">
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Тренування
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Харчування
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Корисні поради
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Мотивація та підтримка
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Відповіді на ваші питання
+                  </li>
+                </ul>
+                <div class="product-footer">
+                  <div class="product-price-wrapper">
+                    <span class="product-price">400 <span class="product-currency">грн</span></span>
+                    <span class="product-period">/ місяць</span>
+                  </div>
+                  <a href="https://t.me/fittvan" target="_blank" rel="noopener" class="btn btn-primary" id="btn-prod-1">Приєднатись</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card-wrapper scroll-reveal tilt-card">
+            <div class="product-card-inner">
+              <!-- Front Face Cover -->
+              <div class="product-card-front">
+                <div class="product-front-badge">02</div>
+                <h3 class="product-front-title">Індивідуальна консультація</h3>
+                <div class="product-front-prompt">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Деталі</span>
+                </div>
+              </div>
+              <!-- Back Face Details -->
+              <div class="product-card-back">
+                <div class="product-badge">02</div>
+                <div class="product-header">
+                  <h3 class="product-title">Індивідуальна консультація</h3>
+                  <p class="product-desc">Особиста онлайн-консультація + тижневий супровід для старту.</p>
+                </div>
+                <ul class="product-features">
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Аналіз вашої ситуації
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Розбір харчування
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    План тренувань
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Рекомендації та відповіді
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    7 днів підтримки в Telegram
+                  </li>
+                </ul>
+                <div class="product-footer">
+                  <div class="product-price-wrapper">
+                    <span class="product-price">2 000 <span class="product-currency">грн</span></span>
+                    <span class="product-period">разово</span>
+                  </div>
+                  <a href="https://t.me/fittvan" target="_blank" rel="noopener" class="btn btn-primary" id="btn-prod-2">Записатись</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card-wrapper scroll-reveal tilt-card">
+            <div class="product-card-inner">
+              <!-- Front Face Cover -->
+              <div class="product-card-front">
+                <div class="product-front-badge">03</div>
+                <h3 class="product-front-title">Індивідуальний супровід</h3>
+                <div class="product-front-prompt">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Деталі</span>
+                </div>
+              </div>
+              <!-- Back Face Details -->
+              <div class="product-card-back">
+                <div class="product-badge">03</div>
+                <div class="product-header">
+                  <h3 class="product-title">Індивідуальний супровід</h3>
+                  <p class="product-desc">Повноцінний супровід протягом 2 місяців після консультації.</p>
+                </div>
+                <ul class="product-features">
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Індивідуальний план тренувань
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Індивідуальне харчування
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Ведення супроводу і корекція
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Доступ до Telegram-чату
+                  </li>
+                  <li class="feature-item">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Постійна підтримка та мотивація
+                  </li>
+                </ul>
+                <div class="product-footer">
+                  <div class="product-price-wrapper">
+                    <span class="product-price">12 000 <span class="product-currency">грн</span></span>
+                    <span class="product-period">/ 2 місяці</span>
+                  </div>
+                  <a href="https://t.me/fittvan" target="_blank" rel="noopener" class="btn btn-primary" id="btn-prod-3">Хочу результат</a>
+                </div>
+                <div class="product-notice">
+                  <svg class="notice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>Індивідуальний супровід можливий лише після проходження консультації.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         REVIEWS SECTION
+         ========================================================================== -->
+    <section class="section scroll-reveal" id="reviews">
+      <div class="section-container">
+        <h2 class="section-title">Відгуки клієнтів</h2>
+        
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card tilt-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="user_andriy.png" alt="Андрій" class="reviewer-avatar">
+                <div class="reviewer-name-wrapper">
+                  <span class="reviewer-name">Андрій</span>
+                  <span class="reviewer-result">-12 кг за 3 місяці</span>
+                </div>
+              </div>
+              <div class="review-stars">
+                <!-- 5 Stars -->
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+            </div>
+            <p class="review-text">
+              "Іван допоміг мені не тільки змінити тіло, а й мислення. Професіонал своєї справи!"
+            </p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card tilt-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="user_olya.png" alt="Оля" class="reviewer-avatar">
+                <div class="reviewer-name-wrapper">
+                  <span class="reviewer-name">Оля</span>
+                  <span class="reviewer-result">-8 кг за 2 місяці</span>
+                </div>
+              </div>
+              <div class="review-stars">
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+            </div>
+            <p class="review-text">
+              "Завдяки підтримці Івана я нарешті полюбила тренування та правильне харчування."
+            </p>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card tilt-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <img src="user_maksym.png" alt="Максим" class="reviewer-avatar">
+                <div class="reviewer-name-wrapper">
+                  <span class="reviewer-name">Максим</span>
+                  <span class="reviewer-result">+7 кг м'язової маси</span>
+                </div>
+              </div>
+              <div class="review-stars">
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+            </div>
+            <p class="review-text">
+              "Програма супроводу — це найкраще рішення, яке я прийняв для себе."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CTA SECTION
+         ========================================================================== -->
+    <section class="section scroll-reveal" id="cta-block">
+      <div class="section-container">
+        <div class="cta-section">
+          <h2 class="cta-title">Готовий до змін?</h2>
+          <p class="cta-desc">Обери свій шлях до результату вже сьогодні!</p>
+          <a href="#products" class="btn btn-primary btn-cta" id="btn-cta-main">
+            Обрати програму
+            <svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER BOTTOM
+       ========================================================================== -->
+  <footer class="footer">
+    <p class="footer-text">© 2026 Іван Скочеляс. Усі права захищено.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Вгору">
+    <svg class="scroll-top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       SCRIPTS
+       ========================================================================== -->
   <script>
+    // 1. Scroll Reveal Animation Observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
 
     document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
+    // Instant reveal check for elements in initial viewport
     setTimeout(() => {
       document.querySelectorAll('.scroll-reveal').forEach(el => {
         const rect = el.getBoundingClientRect();
@@ -268,7 +549,87 @@
           el.classList.add('revealed');
         }
       });
-    }, 600);
+    }, 400);
+
+    // 2. Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. Dynamic Interactive Background Blob (Follows mouse cursor on desktop)
+    const interactiveBlob = document.getElementById('interactiveBlob');
+    if (window.innerWidth >= 900) {
+      window.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        // Smoothly offset interactive blob relative to cursor
+        interactiveBlob.style.left = `${x - 200}px`;
+        interactiveBlob.style.top = `${y - 200}px`;
+        interactiveBlob.style.transition = 'left 0.1s ease-out, top 0.1s ease-out';
+      });
+    }
+
+    // 4. 3D Parallax Tilt Effect for Cards
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    
+    if (window.innerWidth >= 900) {
+      tiltCards.forEach(card => {
+        // Special case for full-width hero image wrapper to do internal image pan parallax
+        if (card.classList.contains('hero-img-wrapper')) {
+          const img = card.querySelector('.hero-img');
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const xc = rect.width / 2;
+            const yc = rect.height / 2;
+            
+            // Pan image slightly (max 15px horizontal, 10px vertical) and keep scaled
+            const moveX = ((x - xc) / xc) * 15;
+            const moveY = ((y - yc) / yc) * 10;
+            
+            img.style.transform = `scale(1.08) translate(${moveX}px, ${moveY}px)`;
+            img.style.transition = 'transform 0.1s ease-out';
+          });
+          
+          card.addEventListener('mouseleave', () => {
+            img.style.transform = 'scale(1.01)';
+            img.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+          });
+          return;
+        }
+
+        // Standard 3D card tilt for smaller cards
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const xc = rect.width / 2;
+          const yc = rect.height / 2;
+          
+          const maxRotation = 10;
+          const angleX = -((yc - y) / yc) * maxRotation;
+          const angleY = ((x - xc) / xc) * maxRotation;
+          
+          card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+          card.style.transition = 'transform 0.05s ease';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+          card.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+      });
+    }
   </script>
 </body>
 </html>
