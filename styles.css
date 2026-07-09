@@ -1188,140 +1188,343 @@ body {
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-/* Mobile (under 400px) */
-@media (max-width: 400px) {
+/* ---- Small phones (≤ 480px) ---- */
+@media (max-width: 480px) {
+
+  /* Base spacing */
   .section-container, .hero-container {
-    padding: 0 12px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 16px 0 16px;
+  }
+  .hero-img-wrapper {
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+  .hero-text-content {
+    padding: 0 4px;
+    text-align: center;
+  }
+  .brand-title {
+    font-size: 0.62rem;
+    letter-spacing: 2.5px;
   }
   .brand-name {
-    font-size: 1.9rem;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .brand-pitch {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  /* Contacts */
+  .contacts-widget {
+    flex-direction: column;
+    gap: 12px;
   }
   .social-grid {
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .social-card {
-    padding: 16px 4px;
+    padding: 16px 6px;
+    border-radius: 16px;
   }
   .social-icon-badge {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     margin-bottom: 8px;
   }
   .social-label {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
   .social-handle {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
   }
   .call-card {
-    padding: 14px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-radius: 16px;
   }
   .call-number {
+    font-size: 0.84rem;
+  }
+
+  /* About */
+  .about-card {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+  .about-img-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+  }
+  .about-img {
+    border-radius: 16px;
+  }
+  .about-content {
+    gap: 14px;
+  }
+  .about-text {
     font-size: 0.88rem;
   }
-  .about-card {
-    padding: 18px;
-  }
   .stats-grid {
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
-  .product-card-front, .product-card-back {
-    padding: 22px 18px;
+  .stat-card {
+    padding: 14px 10px;
+    border-radius: 14px;
+  }
+
+  /* Products flip cards */
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .product-card-wrapper {
+    height: auto;
+    min-height: 420px;
+  }
+  .product-card-front,
+  .product-card-back {
+    border-radius: 20px;
+    padding: 24px 20px;
+  }
+  .product-front-badge {
+    font-size: 2.2rem;
+    width: 70px;
+    height: 70px;
+  }
+  .product-front-title {
+    font-size: 1.1rem;
+  }
+  .product-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.72rem;
+    top: -14px;
+    left: 20px;
   }
   .product-title {
-    font-size: 1.08rem;
+    font-size: 1rem;
+  }
+  .product-desc {
+    font-size: 0.82rem;
+  }
+  .feature-item {
+    font-size: 0.82rem;
+    gap: 8px;
   }
   .product-price {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  .product-notice {
+    font-size: 0.72rem;
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
   .review-card {
-    padding: 18px;
+    border-radius: 18px;
+    padding: 18px 16px;
+  }
+  .review-text {
+    font-size: 0.84rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 30px 18px;
+    border-radius: 22px;
+  }
+  .cta-title {
+    font-size: 1.25rem;
+  }
+  .cta-desc {
+    font-size: 0.84rem;
+  }
+  .btn-cta {
+    max-width: 100%;
+    font-size: 0.82rem;
+    padding: 13px 20px;
+  }
+
+  /* Scroll-to-top */
+  .scroll-top-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-/* Tablet (600px+) */
-@media (min-width: 600px) {
+/* ---- Medium phones (481px – 600px) ---- */
+@media (min-width: 481px) and (max-width: 600px) {
   .section-container, .hero-container {
-    max-width: 620px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .brand-name {
+    font-size: 2.3rem;
+  }
+  .hero-img-wrapper {
+    aspect-ratio: 4/3;
+    border-radius: 24px;
+  }
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .about-img-wrapper {
+    aspect-ratio: 4/3;
+  }
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .product-card-wrapper {
+    height: auto;
+    min-height: 440px;
+  }
+  .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* ---- Tablet (601px – 899px) ---- */
+@media (min-width: 601px) and (max-width: 899px) {
+  .section-container, .hero-container {
+    max-width: 680px;
     padding: 0 24px;
   }
   .brand-name {
     font-size: 2.6rem;
   }
   .brand-title {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     letter-spacing: 4px;
   }
-  .brand-pitch {
-    font-size: 1.02rem;
+  .hero-img-wrapper {
+    aspect-ratio: 16/9;
+    border-radius: 24px;
+  }
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .about-card {
+    flex-direction: row;
+    padding: 28px;
+    gap: 24px;
+  }
+  .about-img-wrapper {
+    flex: 1;
+    max-width: 260px;
+    aspect-ratio: 1;
+  }
+  .about-content {
+    flex: 1.5;
+    gap: 16px;
   }
   .stats-grid {
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .product-card-wrapper {
+    height: 560px;
+  }
+  .product-card-front,
+  .product-card-back {
+    padding: 22px 16px;
+  }
+  .product-front-badge {
+    width: 74px;
+    height: 74px;
+    font-size: 2rem;
   }
   .product-title {
-    font-size: 1.25rem;
-  }
-  .product-badge {
-    width: 34px;
-    height: 34px;
-    font-size: 0.85rem;
-    top: -16px;
-    left: 28px;
+    font-size: 1rem;
   }
   .feature-item {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
   }
-  .review-text {
-    font-size: 0.92rem;
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .btn-cta {
+    max-width: 280px;
   }
 }
 
-/* Desktop (900px+) - Full width Hero & Wide grids */
+/* ---- Desktop (900px+) — Full width Hero & Wide grids ---- */
 @media (min-width: 900px) {
   .section-container {
     max-width: 880px;
     padding: 0 30px;
   }
-  
-  /* Make Hero Container Full-Width on Desktop */
   .hero-container {
     max-width: 100%;
     padding: 0;
   }
-  
   .hero {
-    padding: 0 0 30px; /* remove top padding so banner starts at the top border */
+    padding: 0 0 30px;
   }
-  
-  /* Wide Cinematic Hero Image - Edge to Edge */
   .hero-img-wrapper {
     aspect-ratio: 21/9;
     max-height: 500px;
     border-radius: 0;
-    border: none; /* remove all borders for seamless blend */
+    border: none;
   }
-  
   .hero-text-content {
     max-width: 720px;
     margin: 0 auto;
-    padding: 0 20px; /* horizontal padding for text safety */
+    padding: 0 20px;
   }
-  
   .brand-name {
     font-size: 3.2rem;
     letter-spacing: 3px;
   }
-  
   .brand-title {
     font-size: 0.85rem;
     letter-spacing: 5px;
   }
-  
   .brand-pitch {
     font-size: 1.08rem;
   }
-  
-  /* Horizontal widgets layout */
   .contacts-widget {
     flex-direction: row;
     align-items: stretch;
@@ -1344,8 +1547,6 @@ body {
     flex-direction: column;
     gap: 8px;
   }
-  
-  /* About me two-column */
   .about-card {
     flex-direction: row;
     align-items: center;
@@ -1363,8 +1564,6 @@ body {
     flex-direction: column;
     gap: 18px;
   }
-  
-  /* Products layout adjustments */
   .products-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1377,8 +1576,6 @@ body {
   .product-card-back {
     padding: 28px 22px;
   }
-  
-  /* Reviews grid */
   .reviews-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1390,13 +1587,12 @@ body {
     justify-content: space-between;
     height: 100%;
   }
-  
   .btn-cta {
     max-width: 320px;
   }
 }
 
-/* Large Desktop (1200px+) */
+/* ---- Large Desktop (1200px+) ---- */
 @media (min-width: 1200px) {
   .section-container {
     max-width: 1020px;
@@ -1408,7 +1604,7 @@ body {
     max-height: 550px;
     aspect-ratio: 21/9;
     border-radius: 0;
-    border: none; /* remove all borders for seamless blend */
+    border: none;
   }
   .about-card {
     gap: 45px;
@@ -1424,3 +1620,4 @@ body {
     height: 600px;
   }
 }
+
