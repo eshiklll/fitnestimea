@@ -334,11 +334,21 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: transparent;
-  transition: background var(--transition-fast);
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+  transition: none;
 }
 
 .social-card:hover {
@@ -346,9 +356,15 @@ body {
   box-shadow: var(--shadow-md), var(--shadow-glow);
 }
 
-.social-card.telegram:hover::before { background: #0088cc; }
-.social-card.instagram:hover::before { background: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6); }
-.social-card.facebook:hover::before { background: #1877f2; }
+.social-card:hover::before {
+  left: 150%;
+  transition: left 0.8s ease-in-out;
+}
+
+/* Hover border highlight colors per platform */
+.social-card.telegram:hover { border-color: rgba(0, 136, 204, 0.5); }
+.social-card.instagram:hover { border-color: rgba(236, 72, 153, 0.5); }
+.social-card.facebook:hover { border-color: rgba(24, 119, 242, 0.5); }
 
 .social-card::after {
   content: '';
@@ -429,6 +445,14 @@ body {
 .call-card:hover {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.call-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-mint);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .call-left {
@@ -1182,13 +1206,16 @@ body {
     font-size: 0.6rem;
   }
   .call-card {
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
     padding: 14px 18px;
     border-radius: 16px;
   }
+  .call-label {
+    display: none;
+  }
   .call-number {
-    font-size: 0.84rem;
+    font-size: 0.95rem;
   }
 
   .about-card {
