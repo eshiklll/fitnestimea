@@ -783,6 +783,25 @@ body {
   color: var(--bg-main);
 }
 
+/* ===== Neon Outline Glow on Reveal ===== */
+.product-card-wrapper.glow-active .product-card-front,
+.product-card-wrapper.glow-active .product-card-back {
+  border-color: var(--accent-mint);
+  box-shadow: 
+    0 0 10px rgba(140, 215, 207, 0.3),
+    0 0 25px rgba(140, 215, 207, 0.2),
+    0 0 50px rgba(140, 215, 207, 0.1),
+    inset 0 0 20px rgba(140, 215, 207, 0.05);
+}
+
+.product-card-wrapper.glow-active .product-front-badge {
+  box-shadow: 0 0 20px rgba(140, 215, 207, 0.4);
+}
+
+.product-card-wrapper.glow-active .product-card-front::before {
+  background: radial-gradient(circle, rgba(140, 215, 207, 0.12) 0%, transparent 60%);
+}
+
 .product-front-title {
   font-size: 1.25rem;
   font-weight: 800;
