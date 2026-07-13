@@ -334,20 +334,25 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  left: -150%;
-  width: 50%;
+  left: -120%;
+  width: 80%;
   height: 100%;
   background: linear-gradient(
     90deg,
-    transparent,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.04),
-    transparent
+    transparent 0%,
+    rgba(255, 255, 255, 0.015) 25%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.18) 55%,
+    rgba(255, 255, 255, 0.06) 60%,
+    rgba(255, 255, 255, 0.015) 75%,
+    transparent 100%
   );
-  transform: skewX(-25deg);
+  transform: skewX(-18deg);
   pointer-events: none;
   z-index: 2;
+  opacity: 0;
   transition: none;
 }
 
@@ -358,7 +363,26 @@ body {
 
 .social-card:hover::before {
   left: 150%;
-  transition: left 0.8s ease-in-out;
+  opacity: 1;
+  transition: left 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease;
+}
+
+/* Subtle glass diagonal accent overlay */
+.social-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 /* Hover border highlight colors per platform */
@@ -366,29 +390,9 @@ body {
 .social-card.instagram:hover { border-color: rgba(236, 72, 153, 0.5); }
 .social-card.facebook:hover { border-color: rgba(24, 119, 242, 0.5); }
 
-.social-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  background-size: 45px 45px;
-}
+/* Glass diagonal accent — visible on hover layered under the shimmer sweep */
 .social-card:hover::after {
-  opacity: 0.045;
-}
-
-.social-card.telegram::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 24 24'%3E%3Cpath fill='%230088cc' d='M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.787l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z'/%3E%3C/svg%3E");
-}
-
-.social-card.instagram::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23ec4899' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='2' width='20' height='20' rx='5'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='17.5' cy='6.5' r='1.2' fill='%23ec4899' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-.social-card.facebook::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 24 24'%3E%3Cpath fill='%231877f2' d='M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z'/%3E%3C/svg%3E");
+  opacity: 0.06;
 }
 
 .social-icon-badge {
@@ -473,11 +477,13 @@ body {
   color: var(--text-secondary);
 }
 
+/* Phone number — must ALWAYS stay on one line */
 .call-number {
   font-size: 1rem;
   font-weight: 700;
   color: var(--accent-mint);
   letter-spacing: 0.5px;
+  white-space: nowrap !important;
 }
 
 .about-card {
@@ -1142,6 +1148,22 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Extra small screens — shrink phone further so last digits never wrap */
+@media (max-width: 400px) {
+  .call-card {
+    gap: 8px;
+    padding: 12px 14px;
+  }
+  .call-number {
+    font-size: 0.82rem;
+    letter-spacing: 0;
+  }
+  .call-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 

@@ -519,7 +519,8 @@
 
     // 3. Dynamic Interactive Background Blob (Follows mouse cursor on desktop)
     const interactiveBlob = document.getElementById('interactiveBlob');
-    if (window.innerWidth >= 900) {
+    // Only enable mouse-following blob on devices with a real hover cursor (not touch)
+    if (window.matchMedia('(hover: hover)').matches && window.innerWidth >= 900) {
       window.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
@@ -528,6 +529,9 @@
         interactiveBlob.style.top = `${y - 200}px`;
         interactiveBlob.style.transition = 'left 0.1s ease-out, top 0.1s ease-out';
       });
+    } else {
+      // On touch devices, keep the blob at a gentle default position
+      interactiveBlob.style.animation = 'float 25s infinite ease-in-out';
     }
 
     // 4. 3D Parallax Tilt Effect for Cards
