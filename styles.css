@@ -1430,9 +1430,6 @@ body {
     border-radius: 20px;
     padding: 24px 20px;
   }
-  .product-card-front {
-    overflow: visible;
-  }
   .product-front-badge {
     font-size: 2.2rem;
     width: 70px;
@@ -1590,6 +1587,7 @@ body {
   }
   .product-card-wrapper {
     height: 560px;
+    overflow: visible;
   }
   .product-card-front,
   .product-card-back {
