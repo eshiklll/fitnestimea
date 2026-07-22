@@ -658,6 +658,7 @@ body {
 }
 
 .product-card-wrapper {
+  --card-radius: 28px;
   perspective: 1500px;
   background: transparent;
   width: 100%;
@@ -690,7 +691,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 28px;
+  border-radius: var(--card-radius);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
 }
@@ -788,7 +789,7 @@ body {
 .product-card-wrapper .neon-glow-line {
   position: absolute;
   inset: 0;
-  border-radius: 28px;
+  border-radius: var(--card-radius);
   pointer-events: none;
   z-index: 3;
   opacity: 0;
@@ -1458,6 +1459,7 @@ body {
     gap: 20px;
   }
   .product-card-wrapper {
+    --card-radius: 20px;
     overflow: visible;
   }
   .product-card-wrapper:nth-child(1) {
@@ -1471,7 +1473,6 @@ body {
   }
   .product-card-front,
   .product-card-back {
-    border-radius: 20px;
     padding: 20px 18px;
   }
   .product-card-back {
