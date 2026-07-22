@@ -1424,13 +1424,13 @@ body {
     overflow: visible;
   }
   .product-card-wrapper:nth-child(1) {
-    height: 330px;
+    height: 300px;
   }
   .product-card-wrapper:nth-child(2) {
-    height: 370px;
+    height: 340px;
   }
   .product-card-wrapper:nth-child(3) {
-    height: 370px;
+    height: 340px;
   }
   .product-card-front,
   .product-card-back {
@@ -1556,13 +1556,13 @@ body {
     overflow: visible;
   }
   .product-card-wrapper:nth-child(1) {
-    height: 330px;
+    height: 300px;
   }
   .product-card-wrapper:nth-child(2) {
-    height: 370px;
+    height: 340px;
   }
   .product-card-wrapper:nth-child(3) {
-    height: 370px;
+    height: 340px;
   }
   .reviews-grid {
     display: flex;
