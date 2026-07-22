@@ -755,15 +755,6 @@ body {
   background-size: 70px 70px;
 }
 
-.product-card-wrapper:nth-child(2) .product-card-back {
-  border-color: rgba(140, 215, 207, 0.2);
-}
-
-.product-card-wrapper:nth-child(3) .product-card-back {
-  border: 1.5px solid rgba(140, 215, 207, 0.35);
-  box-shadow: var(--shadow-sm), 0 0 25px rgba(140, 215, 207, 0.08), inset 0 0 30px rgba(140, 215, 207, 0.03);
-}
-
 .product-front-badge {
   width: 90px;
   height: 90px;
@@ -785,57 +776,6 @@ body {
   box-shadow: 0 0 30px rgba(140, 215, 207, 0.3);
   background: var(--accent-mint);
   color: var(--bg-main);
-}
-
-/* ===== Neon Outline Glow on Reveal ===== */
-/* ===== Neon Sweep Glow — плавна поява зверху вниз ===== */
-.product-card-back .neon-glow-line {
-  position: absolute;
-  inset: 0;
-  border-radius: var(--card-radius);
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0;
-  box-shadow:
-    0 0 10px rgba(140, 215, 207, 0.35),
-    0 0 25px rgba(140, 215, 207, 0.25),
-    inset 0 0 15px rgba(140, 215, 207, 0.06);
-  border: 1px solid var(--accent-mint);
-  clip-path: inset(0 0 100% 0);
-  transition: border-color var(--transition-normal);
-}
-
-@keyframes neonSweepDown {
-  0% {
-    clip-path: inset(0 0 100% 0);
-    opacity: 0.4;
-  }
-  8% {
-    opacity: 1;
-  }
-  100% {
-    clip-path: inset(0 0 0% 0);
-    opacity: 1;
-  }
-}
-
-.product-card-back .neon-glow-line.active {
-  animation: neonSweepDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-}
-
-/* Fallback glow state (e.g. for non-animated scenario) */
-.product-card-wrapper.glow-active .product-card-front,
-.product-card-wrapper.glow-active .product-card-back {
-  border-color: var(--accent-mint);
-  box-shadow: 
-    0 0 10px rgba(140, 215, 207, 0.3),
-    0 0 25px rgba(140, 215, 207, 0.2),
-    0 0 50px rgba(140, 215, 207, 0.1),
-    inset 0 0 20px rgba(140, 215, 207, 0.05);
-}
-
-.product-card-wrapper.glow-active .product-front-badge {
-  box-shadow: 0 0 20px rgba(140, 215, 207, 0.4);
 }
 
 .product-front-title {
@@ -869,7 +809,11 @@ body {
 
 .product-card-back {
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--accent-mint);
+  box-shadow: 
+    0 0 15px rgba(140, 215, 207, 0.25),
+    0 0 35px rgba(140, 215, 207, 0.12),
+    inset 0 0 20px rgba(140, 215, 207, 0.05);
   transform: rotateY(180deg);
   z-index: 1;
   padding: 28px;
@@ -877,11 +821,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: visible;
+  border-radius: var(--card-radius);
+  transition: all var(--transition-normal);
 }
 
 .product-card-wrapper:hover .product-card-back {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-md), var(--shadow-glow);
+  border-color: var(--accent-mint);
+  box-shadow: 
+    0 0 25px rgba(140, 215, 207, 0.4),
+    0 0 50px rgba(140, 215, 207, 0.2),
+    inset 0 0 25px rgba(140, 215, 207, 0.08);
 }
 
 .product-badge {
