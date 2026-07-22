@@ -1421,13 +1421,13 @@ body {
     gap: 20px;
   }
   .product-card-wrapper {
-    height: 540px;
+    height: 470px;
     overflow: visible;
   }
   .product-card-front,
   .product-card-back {
     border-radius: 20px;
-    padding: 24px 20px;
+    padding: 22px 18px;
   }
   .product-front-badge {
     font-size: 2.2rem;
@@ -1444,11 +1444,19 @@ body {
     top: -14px;
     left: 20px;
   }
+  .product-header {
+    margin-bottom: 12px;
+  }
   .product-title {
     font-size: 1rem;
+    margin-bottom: 6px;
   }
   .product-desc {
     font-size: 0.82rem;
+  }
+  .product-features {
+    gap: 8px;
+    margin-bottom: 16px;
   }
   .feature-item {
     font-size: 0.82rem;
@@ -1529,7 +1537,7 @@ body {
     gap: 20px;
   }
   .product-card-wrapper {
-    height: 540px;
+    height: 470px;
     overflow: visible;
   }
   .reviews-grid {
