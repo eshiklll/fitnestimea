@@ -788,7 +788,7 @@ body {
 .product-card-wrapper .neon-glow-line {
   position: absolute;
   inset: 0;
-  border-radius: inherit;
+  border-radius: 28px;
   pointer-events: none;
   z-index: 3;
   opacity: 0;
