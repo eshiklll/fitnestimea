@@ -784,6 +784,43 @@ body {
 }
 
 /* ===== Neon Outline Glow on Reveal ===== */
+/* ===== Neon Sweep Glow — плавна поява зверху вниз ===== */
+.product-card-wrapper .neon-glow-line {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  box-shadow:
+    0 0 10px rgba(140, 215, 207, 0.35),
+    0 0 25px rgba(140, 215, 207, 0.25),
+    0 0 50px rgba(140, 215, 207, 0.12),
+    inset 0 0 20px rgba(140, 215, 207, 0.06);
+  border: 2px solid var(--accent-mint);
+  clip-path: inset(0 0 100% 0);
+  transition: border-color var(--transition-normal);
+}
+
+@keyframes neonSweepDown {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0.4;
+  }
+  8% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+  }
+}
+
+.product-card-wrapper .neon-glow-line.active {
+  animation: neonSweepDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Fallback glow state (e.g. for non-animated scenario) */
 .product-card-wrapper.glow-active .product-card-front,
 .product-card-wrapper.glow-active .product-card-back {
   border-color: var(--accent-mint);
