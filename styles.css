@@ -1421,8 +1421,7 @@ body {
     gap: 20px;
   }
   .product-card-wrapper {
-    height: auto;
-    min-height: 420px;
+    height: 540px;
     overflow: visible;
   }
   .product-card-front,
@@ -1530,8 +1529,7 @@ body {
     gap: 20px;
   }
   .product-card-wrapper {
-    height: auto;
-    min-height: 440px;
+    height: 540px;
     overflow: visible;
   }
   .reviews-grid {
