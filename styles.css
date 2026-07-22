@@ -1427,10 +1427,10 @@ body {
     height: 330px;
   }
   .product-card-wrapper:nth-child(2) {
-    height: 390px;
+    height: 370px;
   }
   .product-card-wrapper:nth-child(3) {
-    height: 380px;
+    height: 370px;
   }
   .product-card-front,
   .product-card-back {
@@ -1439,7 +1439,7 @@ body {
   }
   .product-card-back {
     justify-content: flex-start;
-    gap: 12px;
+    gap: 0;
   }
   .product-front-badge {
     font-size: 2.2rem;
@@ -1468,11 +1468,11 @@ body {
   }
   .product-features {
     gap: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .product-footer {
-    margin-top: auto;
-    padding-top: 12px;
+    margin-top: 0;
+    padding-top: 10px;
   }
   .feature-item {
     font-size: 0.82rem;
@@ -1520,10 +1520,10 @@ body {
   }
 
   .scroll-top-btn {
-    bottom: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -1559,10 +1559,10 @@ body {
     height: 330px;
   }
   .product-card-wrapper:nth-child(2) {
-    height: 390px;
+    height: 370px;
   }
   .product-card-wrapper:nth-child(3) {
-    height: 380px;
+    height: 370px;
   }
   .reviews-grid {
     display: flex;
