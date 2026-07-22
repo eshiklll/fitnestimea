@@ -655,6 +655,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-top: 16px;
 }
 
 .product-card-wrapper {
@@ -662,7 +663,8 @@ body {
   perspective: 1500px;
   background: transparent;
   width: 100%;
-  height: 550px; 
+  height: 550px;
+  overflow: visible;
 }
 
 .product-card-inner {
@@ -673,6 +675,7 @@ body {
   transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
   transform-style: preserve-3d;
   will-change: transform;
+  overflow: visible;
 }
 
 .product-card-wrapper.scroll-reveal.revealed .product-card-inner {
@@ -786,19 +789,18 @@ body {
 
 /* ===== Neon Outline Glow on Reveal ===== */
 /* ===== Neon Sweep Glow — плавна поява зверху вниз ===== */
-.product-card-wrapper .neon-glow-line {
+.product-card-back .neon-glow-line {
   position: absolute;
   inset: 0;
   border-radius: var(--card-radius);
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
   opacity: 0;
   box-shadow:
     0 0 10px rgba(140, 215, 207, 0.35),
     0 0 25px rgba(140, 215, 207, 0.25),
-    0 0 50px rgba(140, 215, 207, 0.12),
-    inset 0 0 20px rgba(140, 215, 207, 0.06);
-  border: 2px solid var(--accent-mint);
+    inset 0 0 15px rgba(140, 215, 207, 0.06);
+  border: 1px solid var(--accent-mint);
   clip-path: inset(0 0 100% 0);
   transition: border-color var(--transition-normal);
 }
@@ -817,7 +819,7 @@ body {
   }
 }
 
-.product-card-wrapper .neon-glow-line.active {
+.product-card-back .neon-glow-line.active {
   animation: neonSweepDown 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
@@ -834,10 +836,6 @@ body {
 
 .product-card-wrapper.glow-active .product-front-badge {
   box-shadow: 0 0 20px rgba(140, 215, 207, 0.4);
-}
-
-.product-card-wrapper.glow-active .product-card-front::before {
-  background: radial-gradient(circle, rgba(140, 215, 207, 0.12) 0%, transparent 60%);
 }
 
 .product-front-title {
@@ -878,6 +876,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: visible;
 }
 
 .product-card-wrapper:hover .product-card-back {
@@ -887,13 +886,13 @@ body {
 
 .product-badge {
   position: absolute;
-  top: -14px;
+  top: -16px;
   left: 24px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--bg-main);
-  border: 1px solid var(--accent-mint);
+  background: var(--bg-card);
+  border: 1.5px solid var(--accent-mint);
   color: var(--accent-mint);
   display: flex;
   align-items: center;
@@ -902,9 +901,10 @@ body {
   font-weight: 700;
   box-shadow: var(--shadow-sm);
   transition: background var(--transition-normal), color var(--transition-normal);
+  z-index: 20;
 }
 
-.product-card:hover .product-badge {
+.product-card-wrapper:hover .product-badge {
   background: var(--accent-mint);
   color: var(--bg-main);
 }
@@ -1491,8 +1491,9 @@ body {
     width: 30px;
     height: 30px;
     font-size: 0.72rem;
-    top: -14px;
+    top: -15px;
     left: 20px;
+    z-index: 10;
   }
   .product-header {
     margin-bottom: 8px;

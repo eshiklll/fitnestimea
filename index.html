@@ -184,7 +184,6 @@
         <div class="products-container">
 
           <div class="product-card-wrapper scroll-reveal tilt-card">
-            <div class="neon-glow-line"></div>
             <div class="product-card-inner">
               
               <div class="product-card-front">
@@ -199,6 +198,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="neon-glow-line"></div>
                 <div class="product-badge">01</div>
                 <div class="product-header">
                   <h3 class="product-title">Доступ до Telegram-чату</h3>
@@ -248,7 +248,6 @@
           </div>
 
           <div class="product-card-wrapper scroll-reveal tilt-card">
-            <div class="neon-glow-line"></div>
             <div class="product-card-inner">
               
               <div class="product-card-front">
@@ -263,6 +262,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="neon-glow-line"></div>
                 <div class="product-badge">02</div>
                 <div class="product-header">
                   <h3 class="product-title">Індивідуальна консультація</h3>
@@ -312,7 +312,6 @@
           </div>
 
           <div class="product-card-wrapper scroll-reveal tilt-card">
-            <div class="neon-glow-line"></div>
             <div class="product-card-inner">
               
               <div class="product-card-front">
@@ -327,6 +326,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="neon-glow-line"></div>
                 <div class="product-badge">03</div>
                 <div class="product-header">
                   <h3 class="product-title">Індивідуальний супровід</h3>
@@ -610,8 +610,11 @@
     function activateCardGlow(card) {
       if (card.dataset.neonDone === '1') return;
       card.dataset.neonDone = '1';
-      neonQueue.push(card);
-      if (!neonAnimating) processNeonQueue();
+      // Затримка 1800ms, щоб неон запускався тільки ПІСЛЯ завершення перевороту картки
+      setTimeout(() => {
+        neonQueue.push(card);
+        if (!neonAnimating) processNeonQueue();
+      }, 1800);
     }
 
     // Обробка карток, які вже розкриті прямо зараз
