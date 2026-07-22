@@ -198,6 +198,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="card-neon-sweep"></div>
                 <div class="product-badge">01</div>
                 <div class="product-header">
                   <h3 class="product-title">Доступ до Telegram-чату</h3>
@@ -261,6 +262,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="card-neon-sweep"></div>
                 <div class="product-badge">02</div>
                 <div class="product-header">
                   <h3 class="product-title">Індивідуальна консультація</h3>
@@ -324,6 +326,7 @@
               </div>
               
               <div class="product-card-back">
+                <div class="card-neon-sweep"></div>
                 <div class="product-badge">03</div>
                 <div class="product-header">
                   <h3 class="product-title">Індивідуальний супровід</h3>
@@ -582,9 +585,52 @@
       interactiveBlob.style.animation = 'float 25s infinite ease-in-out';
     }
 
-    // 5. Product Card Glow state handling
-    document.querySelectorAll('#products .product-card-wrapper').forEach(card => {
-      card.classList.add('glow-active');
+    // 5. Product Card Neon Sweep — плавний рух неонового світла ПІСЛЯ повороту картки
+    const SWEEP_DURATION = 1800; // ms
+    let sweepQueue = [];
+    let sweepAnimating = false;
+
+    function processSweepQueue() {
+      if (sweepQueue.length === 0) {
+        sweepAnimating = false;
+        return;
+      }
+      sweepAnimating = true;
+      const card = sweepQueue.shift();
+      const sweepEl = card.querySelector('.card-neon-sweep');
+      if (sweepEl) {
+        sweepEl.classList.add('active');
+        setTimeout(processSweepQueue, SWEEP_DURATION);
+      } else {
+        processSweepQueue();
+      }
+    }
+
+    function triggerCardSweep(card) {
+      if (card.dataset.sweepDone === '1') return;
+      card.dataset.sweepDone = '1';
+      // Затримка 1500ms, щоб анімація неона виходила пізніше — після перевороту
+      setTimeout(() => {
+        sweepQueue.push(card);
+        if (!sweepAnimating) processSweepQueue();
+      }, 1500);
+    }
+
+    document.querySelectorAll('#products .product-card-wrapper.revealed').forEach(triggerCardSweep);
+
+    const sweepObserver = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          const card = mutation.target;
+          if (card.classList.contains('revealed')) {
+            triggerCardSweep(card);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('#products .product-card-wrapper').forEach(el => {
+      sweepObserver.observe(el, { attributes: true });
     });
 
     // 4. 3D Parallax Tilt Effect for Cards
